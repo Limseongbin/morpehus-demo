@@ -1,4 +1,4 @@
-	# This shell script will install JSON server and configure it to serve the app.json file
+# This shell script will install JSON server and configure it to serve the app.json file
  
 IP="<%= server.internalIp %>"
  
