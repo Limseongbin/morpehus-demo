@@ -8,13 +8,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 HOST = morpheus["morpheus"]["applianceHost"]
 INTERNAL_HOST = morpheus["customOptions"]["internalHost"]
 TOKEN = morpheus["morpheus"]["apiAccessToken"]
-AWS_KEY = morpheus["customOptions"]["awsKey"]
-AWS_SECRET = morpheus["customOptions"]["awsSecret"]
-AWS_VPC = morpheus["customOptions"]["awsVpc"]
-AWS_REGION = morpheus["customOptions"]["awsRegion"]
+#AWS_KEY = morpheus["customOptions"]["awsKey"]
+#AWS_SECRET = morpheus["customOptions"]["awsSecret"]
+#AWS_VPC = morpheus["customOptions"]["awsVpc"]
+#AWS_REGION = morpheus["customOptions"]["awsRegion"]
 INTERNAL_URL = "https://%s" % (INTERNAL_HOST)
-CLOUD_INIT_PASSWORD = "Password123?"
-WINDOWS_PASSWORD = "Password123?"
+CLOUD_INIT_PASSWORD = "P@ssw0rd"
+WINDOWS_PASSWORD = "P@ssw0rd"
  
 ## Variables
 AMI_UBUNTU = morpheus["customOptions"]["amiubuntu"]
