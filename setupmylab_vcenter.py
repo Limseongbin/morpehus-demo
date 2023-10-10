@@ -805,7 +805,7 @@ add_naming_policy()
  
 ## Get Git repo id
 ## repo_id = get_repo_id_by_name("ilt-class-automation-labcode - Automation Class")
-repo_id = get_repo_id_by_name("ilt-class-automation-labcode")
+repo_id = get_repo_id_by_name("morpehus-demo")
  
 ## Module 3 - Add task to dump variables
 add_python_task("Dump Variables", "dumpVar", "12", "jythonTask", "value", "repository", repo_id, "dumpVariables.py", "", "")
