@@ -773,7 +773,7 @@ update_session_setting("userBrowserSessionTimeout", "60")
 ## Provisioning Settings
 update_provisioning_setting("showPricing", True)
 update_provisioning_setting("reuseSequence", True)
-update_provisioning_setting("cloudInitUserName", "morpheusci")
+update_provisioning_setting("cloudInitUserName", "morpheus-user")
 update_provisioning_setting("cloudInitPassword", CLOUD_INIT_PASSWORD)
 update_provisioning_setting("windowsPassword", WINDOWS_PASSWORD)
  
@@ -785,7 +785,7 @@ update_log_setting("enabled", True)
  
 ## Create group and cloud
 group_id = create_group("All Clouds", "allClouds")
-add_cloud("AWS Lab", group_id)
+add_cloud("vCenter Lab", group_id)
  
 ## Create Virtual Images
 create_virtual_image("AWS CentOS 7", "35", AMI_CENTOS)
