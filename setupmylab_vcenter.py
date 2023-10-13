@@ -150,7 +150,12 @@ def add_cloud(name, group_id):
         "code": "vcenterLab",
         "visibility": "private",
         "enabled": "on",
-        "autoRecoverPowerState": "off"
+        "autoRecoverPowerState": "off",
+        "credential": {
+          "username": VCENTER_USER,
+          "password": VCENTER_PWD,
+          "type": "username-password"
+        }
       }
     }
  
