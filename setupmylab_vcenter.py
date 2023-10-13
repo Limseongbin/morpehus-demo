@@ -18,6 +18,9 @@ VCENTER_PWD = morpheus["customOptions"]["vcenterPwd"]
 #INTERNAL_URL = "https://%s" % (INTERNAL_HOST)
 CLOUD_INIT_PASSWORD = "P@ssw0rd"
 WINDOWS_PASSWORD = "P@ssw0rd"
+
+print("HOST : " + str(HOST))
+print("TOKEN : " + str(TOKEN))
  
 ## Variables
 #AMI_UBUNTU = morpheus["customOptions"]["amiubuntu"]
