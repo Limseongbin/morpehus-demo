@@ -20,8 +20,8 @@ CLOUD_INIT_PASSWORD = "P@ssw0rd"
 WINDOWS_PASSWORD = "P@ssw0rd"
  
 ## Variables
-AMI_UBUNTU = morpheus["customOptions"]["amiubuntu"]
-AMI_CENTOS = morpheus["customOptions"]["amicentos"]
+#AMI_UBUNTU = morpheus["customOptions"]["amiubuntu"]
+#AMI_CENTOS = morpheus["customOptions"]["amicentos"]
  
 ## Request headers
 HTTP_HEADERS = {"Content-Type":"application/json","Accept":"application/json","Authorization": "BEARER " + (TOKEN)}
