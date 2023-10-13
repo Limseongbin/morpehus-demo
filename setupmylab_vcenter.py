@@ -133,20 +133,23 @@ def add_cloud(name, group_id):
         "description": name,
         "groupId": group_id,
         "zoneType": {
-          "code": "amazon"
+          "code": "vmware"
         },
         "config": {
           "certificateProvider": "internal",
           "importExisting": "off",
-          "endpoint": AWS_REGION,
-          "accessKey": AWS_KEY,
-          "secretKey": AWS_SECRET,
-          "isVpc": "true",
-          "vpc": AWS_VPC,
-          "applianceUrl": INTERNAL_URL
+          "apiUrl": VCENTER_IP,
+          "datacenter": "Datacenter [-O config.datacenter=]"
         },
-        "code": "awsLab",
-        "visibility": "private"
+        "code": "vcenterLab",
+        "visibility": "private",
+        "enabled": "on",
+        "autoRecoverPowerState": "off",
+        "credential": {
+          "username": VCENTER_USER,
+          "password": VCENTER_PWD,
+          "type": "username-password"
+        }
       }
     }
  
