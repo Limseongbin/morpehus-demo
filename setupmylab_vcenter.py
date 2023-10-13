@@ -800,7 +800,7 @@ create_node_type("Custom Ubuntu 20.04 node","custUb2004node","20.04",ubuntuvi)
 ubuntu_node_id = get_node_type_id_name("Custom Ubuntu 20.04 node")
 create_instance_type("Custom Ubuntu", "customUbuntu")
 instance_type_id = get_instance_type_id_name("Custom Ubuntu")
-#add_instance_logo(instance_type_id, "/ubuntu_logo.jpg")
+add_instance_logo(instance_type_id, "/ubuntu_logo.jpg")
 create_layout("Custom Ubuntu Layout", instance_type_id, ubuntu_node_id, "")
  
 ## Create policies
