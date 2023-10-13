@@ -215,7 +215,7 @@ def create_credential(name, password):
         },
         "name": name,
         "enabled": True,
-        "username": "morpheusci",
+        "username": "morpheus-user",
         "password": password
       }
     }
@@ -565,17 +565,13 @@ def create_node_type(name, shortname, version, viid):
         "name": name,
         "shortName": shortname,
         "containerVersion": version,
-        "provisionTypeCode": "amazon",
+        "provisionTypeCode": "vmware",
         "virtualImageId": viid,
-        "statTypeCode": "amazon",
-        "logTypeCode": "amazon",
+        "statTypeCode": "vmware",
+        "logTypeCode": "vmware",
         "serverType": "vm",
         "config": {
         }
-      },
-      "instanceType": {
-        "backupType": "amazonSnapshot",
-        "viewSet": "amazonCustom"
       }
     }
   
@@ -667,7 +663,7 @@ def create_layout(name, instance_id, container_id, workflow_id):
         "name": name,
         "instanceVersion": "Latest",
         "creatable": True,
-        "provisionTypeCode": "amazon",
+        "provisionTypeCode": "vmware",
         "memoryRequirement": "1024",
         "taskSetId": workflow_id,
         "optionTypes": [
@@ -788,9 +784,9 @@ group_id = create_group("All Clouds", "allClouds")
 add_cloud("vCenter Lab", group_id)
  
 ## Create Virtual Images
-create_virtual_image("AWS CentOS 7", "35", AMI_CENTOS)
-create_virtual_image("AWS Ubuntu 20.04", "16", AMI_UBUNTU)
-ubuntuvi = get_vi_id_by_name("AWS Ubuntu 20.04")
+#create_virtual_image("AWS CentOS 7", "35", AMI_CENTOS)
+#create_virtual_image("AWS Ubuntu 20.04", "16", AMI_UBUNTU)
+ubuntuvi = get_vi_id_by_name("Ubuntu 20.04")
  
 ## Create Custom Ubuntu Instance
 create_node_type("Custom Ubuntu 20.04 node","custUb2004node","20.04",ubuntuvi)
@@ -823,10 +819,10 @@ instance_type_id = get_instance_type_id_name("Custom App")
 create_layout("Custom App Layout", instance_type_id, ubuntu_node_id, "")
  
 ## Module 7 - Create Cyphers
-create_cypher_secret("mariaDBRootPass", "0", "Password123?")
-create_cypher_secret("zDBPass", "0", "Password123?")
+create_cypher_secret("mariaDBRootPass", "0", "P@ssw0rd")
+create_cypher_secret("zDBPass", "0", "P@ssw0rd")
 create_cypher_secret("zAdminPass", "0", "zabbix")
-create_cypher_secret("zAPIPass", "0", "Password123?")
+create_cypher_secret("zAPIPass", "0", "P@ssw0rd")
  
 ## Module 7 - Create File Templates
 create_file_template("zabbix/zabbix_frontend_config_aio", "preProvision", "Zabbix Frontend Config - AIO", "zabbix.conf.php", "/etc/zabbix/web", "www-data", "zabbix_fe_conf_aio", "Web")
@@ -842,8 +838,8 @@ add_python_task("Zabbix Create Cypher Server IP", "zabbixCreateCypherServerIP", 
 add_python_task("Zabbix Delete Cypher Server IP", "zabbixDeleteCypherServerIP", "12", "jythonTask", "value", "repository", repo_id, "/zabbix/zabbixDeleteCypherServerIP.py", "", "requests")
  
 ## Create credential for remote tasks
-create_credential("morpheusci", "Password123?")
-cred_id = get_cred_id_by_name("morpheusci")
+create_credential("morpheus-user", "P@ssw0rd")
+cred_id = get_cred_id_by_name("morpheus-user")
  
 ## Add tasks and templates for Zabbix Agent Install
 add_task("Zabbix Agent Install", "zabbixAgentInstall", "1", "script", "on", "repository", repo_id, "/zabbix/zabbixAgentInstall.sh", "resource")
