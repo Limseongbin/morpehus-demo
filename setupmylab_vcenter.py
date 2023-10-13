@@ -150,10 +150,7 @@ def add_cloud(name, group_id):
         "code": "vcenterLab",
         "visibility": "private",
         "enabled": "on",
-        "autoRecoverPowerState": "off",
-        "credential": {
-          "type": "local"
-        }
+        "autoRecoverPowerState": "off"
       }
     }
  
