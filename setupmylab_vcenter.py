@@ -143,8 +143,6 @@ def add_cloud(name, group_id):
           "importExisting": "off",
           "hideHostSelection": "on",
           "apiUrl": VCENTER_IP,
-          "username": VCENTER_USER,
-          "password": VCENTER_PWD,
           "datacenter": "Datacenter [-O config.datacenter=]"
         },
         "code": "vcenterLab",
