@@ -279,7 +279,7 @@ def add_task(name, code, id, script_code, sudo, source_type, repo_id, content_pa
             "id": repo_id
           },
           "contentPath": content_path,
-          "contentRef": "master"
+          "contentRef": "main"
         },
         "executeTarget": execute_target,
         "retryable": False,
@@ -319,7 +319,7 @@ def add_task_remote(name, code, id, script_code, sudo, remote_host, remote_port,
             "id": repo_id
           },
           "contentPath": content_path,
-          "contentRef": "master"
+          "contentRef": "main"
         },
         "executeTarget": execute_target,
         "credential": {
@@ -357,7 +357,7 @@ def add_python_task(name, code, id, script_code, result_type, source_type, repo_
             "id": repo_id
           },
           "contentPath": content_path,
-          "contentRef": "master"
+          "contentRef": "main"
         },
         "taskOptions": {
           "pythonArgs": pythonargs,
@@ -481,7 +481,7 @@ def add_python_task(name, code, id, script_code, result_type, source_type, repo_
             "id": repo_id
           },
           "contentPath": content_path,
-          "contentRef": "master"
+          "contentRef": "main"
         },
         "taskOptions": {
           "pythonArgs": pythonargs,
