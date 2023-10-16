@@ -790,8 +790,8 @@ update_monitoring_setting("autoManageChecks", True)
 update_log_setting("enabled", True)
  
 ## Create group and cloud
-group_id = create_group("All Clouds", "allClouds")
-add_cloud("vCenter Lab", group_id)
+#group_id = create_group("All Clouds", "allClouds")
+#add_cloud("vCenter Lab", group_id)
  
 ## Create Virtual Images
 #create_virtual_image("AWS CentOS 7", "35", AMI_CENTOS)
