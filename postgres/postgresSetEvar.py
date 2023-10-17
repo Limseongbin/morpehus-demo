@@ -62,7 +62,7 @@ else:
     # Run the get_haproxy_ip function pulling in the morpheus variable map. 
     # Runs this function for each VM in the instance
     # Output from get_haproxy_ip os the haproxy IP and port
-    print(morpheus)
+    print(morpheus.json())
     lb_details = get_haproxy_ip(morpheus)
     if lb_details:
         lb_ip = lb_details["ip"]
