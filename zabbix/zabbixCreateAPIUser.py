@@ -26,7 +26,7 @@ response = requests.post(url, headers=headers, data=body, verify=False)
 if not response.ok:
     print("Error creating API user: Response code %s: %s" % (response.status_code, response.text))
     raise Exception("Request error occured")
- 
+
 response_json = response.json()
  
 # Create the api user
@@ -54,3 +54,5 @@ responseuser = requests.post(url, headers=headers, data=bodyuser, verify=False)
 if not responseuser.ok:
     print("Error executing request: Response code %s: %s" % (responseuser.status_code, responseuser.text))
     raise Exception("Request error occured")
+else:
+    print(responseuser)
