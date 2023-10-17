@@ -829,10 +829,10 @@ instance_type_id = get_instance_type_id_name("Custom App")
 create_layout("Custom App Layout", instance_type_id, ubuntu_node_id, "")
  
 ## Module 7 - Create Cyphers
-create_cypher_secret("mariaDBRootPass", "0", "P@ssw0rd")
-create_cypher_secret("zDBPass", "0", "P@ssw0rd")
+create_cypher_secret("mariaDBRootPass", "0", "Password123?")
+create_cypher_secret("zDBPass", "0", "Password123?")
 create_cypher_secret("zAdminPass", "0", "zabbix")
-create_cypher_secret("zAPIPass", "0", "P@ssw0rd")
+create_cypher_secret("zAPIPass", "0", "Password123?")
  
 ## Module 7 - Create File Templates
 create_file_template("zabbix/zabbix_frontend_config_aio", "preProvision", "Zabbix Frontend Config - AIO", "zabbix.conf.php", "/etc/zabbix/web", "www-data", "zabbix_fe_conf_aio", "Web")
