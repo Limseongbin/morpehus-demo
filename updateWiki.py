@@ -21,4 +21,3 @@ r = requests.put(url, headers=headers, data=body, verify=False)
  
 #Returns success code
 print(r)
-CLOSE
