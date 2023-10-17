@@ -28,6 +28,7 @@ if not response.ok:
     raise Exception("Request error occured")
 
 response_json = response.json()
+print(response_json["result"])
  
 # Create the api user
 jbodyuser = {
