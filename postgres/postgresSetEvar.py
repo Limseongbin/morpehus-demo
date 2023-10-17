@@ -23,9 +23,9 @@ def get_haproxy_ip(var_dump):
     # Check if container shortname is haproxy and the container internalIP matches the local_ip.
     # If it is the haproxy node and local_ip matches container internalIP, then return the container internalIp and externalPort.
     for container in containers:
-        print("container[containerTypeShortName] : " + container["containerTypeShortName"])
-        print("container[internalIp] : " + container["internalIp"])
-        print("local_ip : " + local_ip)
+        #print("container[containerTypeShortName] : " + container["containerTypeShortName"])
+        #print("container[internalIp] : " + container["internalIp"])
+        #print("local_ip : " + local_ip)
         if container["containerTypeShortName"] == "haproxy" and container["internalIp"] == local_ip:
             return {"ip": container["internalIp"], "port": container["externalPort"]}
     
