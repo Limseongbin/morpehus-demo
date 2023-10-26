@@ -12,9 +12,6 @@ WINDOWS_PASSWORD = "P@ssw0rd"
 
 print("HOST : " + str(HOST))
 print("TOKEN : " + str(TOKEN))
-#print("VCENTER IP : " + str(VCENTER_IP))
-#print("VCENTER USER : " + str(VCENTER_USER))
-#print("VCENTER PWD : " + str(VCENTER_PWD))
  
 ## Variables
 #AMI_UBUNTU = morpheus["customOptions"]["amiubuntu"]
