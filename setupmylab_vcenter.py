@@ -6,16 +6,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
  
 ## Global Static Variables
 HOST = morpheus["morpheus"]["applianceHost"]
-#INTERNAL_HOST = morpheus["customOptions"]["internalHost"]
 TOKEN = morpheus["morpheus"]["apiAccessToken"]
-#AWS_KEY = morpheus["customOptions"]["awsKey"]
-#AWS_SECRET = morpheus["customOptions"]["awsSecret"]
-#AWS_VPC = morpheus["customOptions"]["awsVpc"]
-#AWS_REGION = morpheus["customOptions"]["awsRegion"]
-#VCENTER_IP = morpheus["customOptions"]["vcenterIp"]
-#VCENTER_USER = morpheus["customOptions"]["vcenterUser"]
-#VCENTER_PWD = morpheus["customOptions"]["vcenterPwd"]
-#INTERNAL_URL = "https://%s" % (INTERNAL_HOST)
 CLOUD_INIT_PASSWORD = "P@ssw0rd"
 WINDOWS_PASSWORD = "P@ssw0rd"
 
