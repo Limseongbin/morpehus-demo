@@ -12,11 +12,7 @@ WINDOWS_PASSWORD = "P@ssw0rd"
 
 print("HOST : " + str(HOST))
 print("TOKEN : " + str(TOKEN))
- 
-## Variables
-#AMI_UBUNTU = morpheus["customOptions"]["amiubuntu"]
-#AMI_CENTOS = morpheus["customOptions"]["amicentos"]
- 
+
 ## Request headers
 HTTP_HEADERS = {"Content-Type":"application/json","Accept":"application/json","Authorization": "BEARER " + (TOKEN)}
 HTTP_UPLOAD_HEADERS = {"Authorization": "BEARER " + (TOKEN)}
